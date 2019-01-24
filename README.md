@@ -1,4 +1,4 @@
-# React Extension Boilerlplate for Chrome and Firefox
+# React Extension Boilerplate for Chrome and Firefox
 
 [![Fork](https://img.shields.io/github/forks/kryptokinght/react-extension-boilerplate.svg) ](https://github.com/kryptokinght/react-extension-boilerplate/network/members)
 [![Issues](https://img.shields.io/github/issues/kryptokinght/react-extension-boilerplate.svg) ](https://github.com/kryptokinght/react-extension-boilerplate/issues)
@@ -21,7 +21,7 @@ Implements all the best Javascript practises with ESLint, Jest, React-StoryBook,
 * Twitter: ...
 
 
-## Installation
+## Installation :checkered_flag:
 
 ```bash
 # clone the git repo
@@ -31,7 +31,7 @@ $ git clone https://github.com/kryptokinght/react-extension-boilerplate.git
 $ npm install
 ```
 
-## Development
+## Development :computer:
 
 * Run script
 ```bash
@@ -46,14 +46,15 @@ $ npm run storybook
 * If you want to load your unpacked extension by yourself, then run `npm run dev`. This will create the extension inside an **dev** folder in `development` mode and will watch the `src` folder for changes.   
 * [Load unpacked extensions](https://developer.chrome.com/extensions/getstarted#unpacked) with `./dev` folder. Though you have to reload the extension by yourself every time the `./dev` folder updates.
 
-## Build
+## Build :wrench: :hammer:
 
 ```bash
 # build files to './extension'
 $ npm run build
 ```
 
-## Compress
+
+## Compress :nut_and_bolt: 
 
 ```bash
 # compress build folder to {manifest.name}.zip and crx
@@ -61,11 +62,20 @@ $ npm run build
 $ npm run compress -- [options]
 ```
 
-[MORE CONTENT TO BE ADDED LATER]
+#### Options
+
+If you want to build `crx` file (auto update), please provide options, and add `update.xml` file url in [manifest.json](https://developer.chrome.com/extensions/autoupdate#update_url manifest.json).
+
+* --app-id: your extension id (can be get it when you first release extension)
+* --key: your private key path (default: './key.pem')  
+  you can use `npm run compress-keygen` to generate private key `./key.pem`
+* --codebase: your `crx` file url
+
+See [autoupdate guide](https://developer.chrome.com/extensions/autoupdate) for more information.
 
 ## Features
 
-## Contributing
+## Contributing :tada:
 
 Contributions are highly welcome. Please take some timeto read the guidelines mentioned here [contribute](CONTRIBUTING.md).
 
