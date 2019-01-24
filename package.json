@@ -1,8 +1,27 @@
 {
-  "name": "youtube-repeat-player",
+  "name": "react-extension-boilerplate",
   "version": "1.0.0",
-  "description": "⚠️ The code above is sphagetti code....it will be refractored once again to conform with the OOP standards 😊.",
-  "main": "background.js",
+  "description": "Modern React boilerplate for Firefox and Chrome extensions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kryptokinght/react-extension-boilerplate"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kryptokinght/react-extension-boilerplate/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:chrome": "npm run chrome-launch",
@@ -19,26 +38,6 @@
     "build-storybook": "build-storybook",
     "chrome-launch": "concurrently --kill-others \"npm run dev\" \"node scripts/chrome-launch.js\" ",
     "firefox-launch": "concurrently --kill-others \"npm run dev\" \"web-ext run --source-dir dev --pref startup.homepage_welcome_url=https://www.youtube.com\" "
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kryptokinght/Youtube-Repeat-Player.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kryptokinght/Youtube-Repeat-Player/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
