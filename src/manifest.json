@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "manifest_version": 2,
+  "name": "Youtube Repeat Player",
+  "description": "A music player to repeat Youtube music and set playlist.",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/browser-polyfill.js",
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "lib/browser-polyfill.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://myapi.com",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "web_accessible_resources": [
+    "musicPlayer.html",
+    "sidebar.html"
+  ],
+  "options_ui": {
+    "page": "./options.html",
+    "open_in_tab": true
+  }
+}
