@@ -23,9 +23,6 @@ Implements all the best Javascript practises with ESLint, Jest, React-StoryBook,
 
 ## Quick start
 
-Choose one of the following options:
-
-
 - Clone the git repo — `git clone
   https://github.com/kryptokinght/react-extension-boilerplate.git`
 - Install with [npm](https://www.npmjs.com/): `npm install html5-boilerplate` and pull in what you need from the resulting `node_modules/html5-boilerplate/dist`
