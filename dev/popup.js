@@ -147,7 +147,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/popup/index.js",1,3]);
+/******/ 	deferredModules.push(["./src/popup/index.js",0,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -166,7 +166,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".App {\n  text-align: center;\n}\n\n.App-logo {\n  -webkit-animation: App-logo-spin infinite 20s linear;\n          animation: App-logo-spin infinite 20s linear;\n  height: 40vmin;\n}\n\n.App-header {\n  background-color: #282c34;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: calc(10px + 2vmin);\n  color: white;\n  padding: 10px;\n  height: 100px;\n}\n\n.App-link {\n  color: #61dafb;\n}\n\n@-webkit-keyframes App-logo-spin {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n\n@keyframes App-logo-spin {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n  }\n}\n", ""]);
+exports.push([module.i, ".popup {\n  text-align: center;\n  width: 800px;\n}\n\n.popup-greet {\n  color: #80FFAB;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: 2em;\n  font-style: italic;\n  letter-spacing: 0.1em;\n  font-family: \"Noto Sans\", sans-serif;\n  margin-top: 2em;\n  padding: 0 0.8em 0.1em 0.8em;\n}\n\n.brand {\n  font-family: 'Roboto Mono', monospace;\n  letter-spacing: 0em;\n  font-style: normal;\n  font-weight: 600;\n}\n\n.stack-head {\n  color: #ffffff;\n  font-family: 'Roboto Mono', monospace;\n  /* font-weight: 700; */\n  font-size: 2em;\n}\n\n.tech-logos {\n  padding: 0 2em 2em 2em;\n}\n\n.logo {\n  height: 40px;\n  padding-right: 1.8em;\n}\n\n.contrib-msg {\n  color: #ffffff;\n  font-family: 'Roboto Mono', monospace;\n  /* font-weight: 700; */\n  font-size: 1.5em;\n  margin: 2em 2em 3em 2em;\n}\n\n.contrib-msg a {\n  color: #0055ff;\n  font-weight: bold;\n}\n\n", ""]);
 
 // exports
 
@@ -185,7 +185,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  background: url(/img/background.png), -webkit-linear-gradient(left, #00331a, #002233);\n  background: url(/img/background.png), linear-gradient(90deg, #00331a, #002233);\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n", ""]);
 
 // exports
 
@@ -238,17 +238,47 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Popup = function Popup(props) {
+var TechStackLogos = function TechStackLogos() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "App"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "App-header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "App-link",
-    href: "https://reactjs.org",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, "Learn React"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.text)));
+    className: "tech-logos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "logo",
+    src: "/img/react.svg",
+    alt: "ReactJS logo",
+    title: "ReactJS"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "logo",
+    src: "/img/webpack.svg",
+    alt: "Webpack logo",
+    title: "Webpack"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "logo",
+    src: "/img/eslint.svg",
+    alt: "ESLint logo",
+    title: "ESLint"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "logo",
+    src: "/img/jest.svg",
+    alt: "Jest logo",
+    title: "Jest"
+  }));
+};
+
+var Popup = function Popup() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "popup"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "popup-greet"
+  }, "Thanks for using ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "brand"
+  }, "Modern extension Boilerplate")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "stack-head"
+  }, "Made using :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TechStackLogos, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "contrib-msg"
+  }, "We would love some of your help in making this boilerplate even better. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.github.com/kryptokinght/react-extension-boilerplate",
+    target: "_blank"
+  }, "React Extension Boilerplate")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Popup);

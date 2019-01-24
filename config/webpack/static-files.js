@@ -17,10 +17,10 @@ const copyPatterns = [
     to: 'lib/',
   },
   // { from: 'node_modules/pdfjs-dist/build/pdf.worker.min.js', to: 'lib/' },
-  // {
-  //  from: 'fonts/*/*',
-  //  to: 'fonts/googlefonts/[name].[ext]',
-  // },
+  {
+    from: 'fonts/*/*',
+    to: 'fonts/googlefonts/[name].[ext]',
+  },
   /* {
     from:
       'node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2,css}',
@@ -30,10 +30,7 @@ const copyPatterns = [
 ];
 
 const htmlAssets = [
-  /* 'fonts/material-icons/material-icons.css',
-  'fonts/googlefonts/lato.css',
-  'fonts/googlefonts/open-sans.css',
-  'fonts/googlefonts/libre-franklin.css', */
+  'fonts/googlefonts/roboto-mono.css',
   'lib/browser-polyfill.js',
 ];
 

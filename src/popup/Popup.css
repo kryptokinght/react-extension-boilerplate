@@ -1,33 +1,55 @@
-.App {
+.popup {
   text-align: center;
+  width: 800px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+.popup-greet {
+  color: #80FFAB;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 10px;
-  height: 100px;
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 2em;
+  padding: 0 0.8em 0.1em 0.8em;
 }
 
-.App-link {
-  color: #61dafb;
+.brand {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 0em;
+  font-style: normal;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stack-head {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  /* font-weight: 700; */
+  font-size: 2em;
 }
+
+.tech-logos {
+  padding: 0 2em 2em 2em;
+}
+
+.logo {
+  height: 40px;
+  padding-right: 1.8em;
+}
+
+.contrib-msg {
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  /* font-weight: 700; */
+  font-size: 1.5em;
+  margin: 2em 2em 3em 2em;
+}
+
+.contrib-msg a {
+  color: #0055ff;
+  font-weight: bold;
+}
+
