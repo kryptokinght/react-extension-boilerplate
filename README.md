@@ -10,28 +10,24 @@
 
 
 React Extension Boilerplate is a modern web extension template for building 
-fast, robust, and adaptable web apps or sites.
+Mozilla and Chrome extensions using ReactJS.
 
-This project is the product of years of iterative development and
-community knowledge. It does not impose a specific development
-philosophy or framework, so you're free to architect your code in the
-way that you want.
+Allows smooth and fast development of extension using on-the-go loading, building, packaging and publishing. 
+<br/> 
+Implements all the best Javascript practises with ESLint, Jest, React-StoryBook, Webpack and lots more. 
 
-* Homepage: [https://html5boilerplate.com/](https://html5boilerplate.com/)
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Twitter: [@h5bp](https://twitter.com/h5bp)
+* Homepage: ...
+* Source: [https://github.com/kryptokinght/react-extension-boilerplate](https://github.com/kryptokinght/react-extension-boilerplate)
+* Twitter: ...
 
 
 ## Quick start
 
 Choose one of the following options:
 
-- Download the latest stable release from
-  [html5boilerplate.com](https://html5boilerplate.com/).
+
 - Clone the git repo — `git clone
-  https://github.com/h5bp/html5-boilerplate.git` - and checkout the
-  [tagged release](https://github.com/h5bp/html5-boilerplate/releases)
-  you'd like to use.
+  https://github.com/kryptokinght/react-extension-boilerplate.git`
 - Install with [npm](https://www.npmjs.com/): `npm install html5-boilerplate` and pull in what you need from the resulting `node_modules/html5-boilerplate/dist`
 - Install with [yarn](https://yarnpkg.com/): `yarn add html5-boilerplate`
 
