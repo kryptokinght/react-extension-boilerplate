@@ -20,7 +20,7 @@ If an issue is not assigned; follow through the comments, ask queries about it a
 
 ## Creating issues
 
-If you face any reproducable problem while launching the game or any feature you think should be there, file an issue in the github repository.
+If you face any reproducable problem while launching the boilerplate or any feature you think should be there, file an issue in the github repository.
 
 It is expected that you will follow the below guidelines while creating issues:
 
