@@ -53,11 +53,7 @@ module.exports = function (webpackEnv) {
       minimizer: [
         plugins.terserPlugin,
         plugins.optimizeCSSAssetsPlugin,
-      ],
-      splitChunks: {
-        chunks: 'all',
-        name: false,
-      }
+      ]
     },
     resolve: {
       modules: ['node_modules'].concat(
