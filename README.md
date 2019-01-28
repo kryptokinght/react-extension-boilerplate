@@ -52,6 +52,8 @@ $ npm run storybook
 # build files to './extension'
 $ npm run build
 ```
+*Once created here's what the extension folder looks like:*
+![Extension folder](screenshots/extension_structure.png)
 
 
 ## Compress :nut_and_bolt: 
