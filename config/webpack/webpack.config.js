@@ -94,6 +94,7 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
+      plugins.friendlyErrorsWebpackPlugin,
       plugins.optionsHtmlPlugin,
       plugins.popupHtmlPlugin,
       plugins.sidebarHtmlPlugin,

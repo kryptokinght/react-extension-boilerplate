@@ -1,5 +1,6 @@
 const { IgnorePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -132,6 +133,7 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
 
   const moduleScopePlugin = new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]);
   const copyPlugin = new CopyPlugin(staticFiles.copyPatterns);
+  const friendlyErrorsWebpackPlugin = new FriendlyErrorsWebpackPlugin();
 
   return {
     optionsHtmlPlugin,
@@ -146,7 +148,8 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
     optimizeCSSAssetsPlugin,
     moduleScopePlugin,
     copyPlugin,
-    htmlIncAssetsPlugin
+    htmlIncAssetsPlugin,
+    friendlyErrorsWebpackPlugin
   };
 };
 

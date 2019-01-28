@@ -88,6 +88,7 @@
     "eslint-plugin-react": "7.11.1",
     "execa": "^1.0.0",
     "file-loader": "2.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "fs-extra": "7.0.0",
     "html-webpack-include-assets-plugin": "^1.0.7",
     "html-webpack-plugin": "4.0.0-alpha.2",
