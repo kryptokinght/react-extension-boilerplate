@@ -3,6 +3,7 @@
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
 
+const Ora = require('ora');
 const execa = require('execa');
 const chalk = require('chalk');
 const webpack = require('webpack');
@@ -16,12 +17,21 @@ let done = false;
 
 const webpackConfigFactory = require('../config/webpack/webpack.config');
 
+console.log('\n-----------------------------------------------------\n'.yellow.bold);
+
 // generate webpack config from webpack config factory
 const webpackConfig = webpackConfigFactory('development');
+
+let spinner = new Ora({
+  text: 'Bundling files and asstes using Webpack'.blue,
+  stream: process.stdout
+});
+spinner.start();
 
 const compiler = webpack(webpackConfig);
 try {
   compiler.run((err, stats) => {
+    spinner.succeed();
     let messages;
     if (err) {
       if (!err.message) {
@@ -62,14 +72,26 @@ try {
       // throw new Error(messages.warnings.join('\n\n'));
       process.exit(1);
     }
+
+
+
     // choose browser to display
     if (argv.browser === 'chrome' && !done) {
       done = true;
+      spinner = new Ora({
+        text: 'Opening the extension in a new Chrome instance'.blue,
+        stream: process.stdout
+      });
+      spinner.start();
       execa('node', ['scripts/chrome-launch.js']).stdout.pipe(process.stdout);
     }
     else if (argv.browser === 'firefox') {
       done = true;
-      console.log('A new instance of Firefox will open in the background.'.blue.bold);
+      spinner = new Ora({
+        text: 'Opening the extension in a new Firefox instance'.blue,
+        stream: process.stdout
+      });
+      spinner.start();
       execa('web-ext', ['run', '--source-dir', 'dev', '--pref', 'startup.homepage_welcome_url=https://www.youtube.com']);
     }
 

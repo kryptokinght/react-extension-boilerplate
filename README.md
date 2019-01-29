@@ -43,6 +43,9 @@ $ npm run start:mozilla
 # runs storybook
 $ npm run storybook
 ```
+*`npm run chrome-launch` in action:*
+![dev gif](screenshots/ext_boiler.gif)
+
 * If you want to load your unpacked extension by yourself, then run `npm run dev`. This will create the extension inside an **dev** folder in `development` mode and will watch the `src` folder for changes.   
 * [Load unpacked extensions](https://developer.chrome.com/extensions/getstarted#unpacked) with `./dev` folder. Though you have to reload the extension by yourself every time the `./dev` folder updates.
 
@@ -92,6 +95,7 @@ Contributions are highly welcome. Please take some time to read the guidelines m
 <div align="center">
   <img src="screenshots/thanks.png" style="text-align: center;">
 </div>
+
 ## License
 
 The code is available under the [MIT license](LICENSE).

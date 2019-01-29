@@ -10,4 +10,3 @@ const dev = path.resolve(__dirname, '..', 'dev');
 const args = [`--load-extension=${dev}`];
 
 chromeLaunch(url, { args });
-console.log('\nA new instance of Chrome will open in the background.'.blue.bold); // eslint-disable-line no-console
