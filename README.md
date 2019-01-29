@@ -46,6 +46,12 @@ $ npm run storybook
 * If you want to load your unpacked extension by yourself, then run `npm run dev`. This will create the extension inside an **dev** folder in `development` mode and will watch the `src` folder for changes.   
 * [Load unpacked extensions](https://developer.chrome.com/extensions/getstarted#unpacked) with `./dev` folder. Though you have to reload the extension by yourself every time the `./dev` folder updates.
 
+*Screenshot of the development folder:*
+<br/>
+![dev folder screenshot](screenshots/dev_ext.png)
+
+**Go to the project folder and run the following commands:** 
+
 ## Build :wrench: :hammer:
 
 ```bash
@@ -53,6 +59,7 @@ $ npm run storybook
 $ npm run build
 ```
 *Once created here's what the extension folder looks like:*
+<br/>
 ![Extension folder](screenshots/extension_structure.png)
 
 
@@ -82,6 +89,9 @@ See [autoupdate guide](https://developer.chrome.com/extensions/autoupdate) for m
 To get an idea about the structure of the project, [read here](CODETOUR.md).
 Contributions are highly welcome. Please take some time to read the guidelines mentioned here [contribute](CONTRIBUTING.md).
 
+<div align="center">
+  <img src="screenshots/thanks.png" style="text-align: center;">
+</div>
 ## License
 
 The code is available under the [MIT license](LICENSE).
