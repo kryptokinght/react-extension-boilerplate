@@ -79,7 +79,8 @@ See [autoupdate guide](https://developer.chrome.com/extensions/autoupdate) for m
 
 ## Contributing :tada:
 
-Contributions are highly welcome. Please take some timeto read the guidelines mentioned here [contribute](CONTRIBUTING.md).
+To get an idea about the structure of the project, [read here](CODETOUR.md).
+Contributions are highly welcome. Please take some time to read the guidelines mentioned here [contribute](CONTRIBUTING.md).
 
 ## License
 

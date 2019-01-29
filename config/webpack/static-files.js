@@ -11,14 +11,14 @@ const copyPatterns = [
     to: '.',
     transform: transformManifestVersion,
   },
-  { from: 'img', to: 'img' },
+  { from: 'src/img', to: 'img' },
   {
     from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js',
     to: 'lib/',
   },
   // { from: 'node_modules/pdfjs-dist/build/pdf.worker.min.js', to: 'lib/' },
   {
-    from: 'fonts/*/*',
+    from: 'src/fonts/*/*',
     to: 'fonts/googlefonts/[name].[ext]',
   },
   /* {
