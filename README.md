@@ -12,16 +12,17 @@
 React Extension Boilerplate is a modern web extension template for building 
 Mozilla and Chrome extensions using ReactJS.
 
-Allows smooth and fast development of extension using on-the-go loading, building, packaging and publishing. 
+Allows smooth and fast development of extension using on-the-go loading, building, packaging and publishing on the most common browsers Chrome and Firefox.<br/>
+Make changes to the source code and watch the extension implement these changes live in the browser.
 <br/> 
 Implements all the best Javascript practises with ESLint, Jest, React-StoryBook, Webpack and lots more. 
 
-* Homepage: ...
 * Source: [https://github.com/kryptokinght/react-extension-boilerplate](https://github.com/kryptokinght/react-extension-boilerplate)
-* Twitter: ...
 
 
 ## Installation :checkered_flag:
+
+Installing this boilerplate is as simple as cloning this repo in a new folder and start editing the source folder.
 
 ```bash
 # clone the git repo
