@@ -38,7 +38,7 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
         title: 'Options',
         chunks: ['options'],
         filename: 'options.html',
-        template: paths.appTemplate,
+        template: paths.optionsTemplate,
       },
       isEnvProduction
         ? {
@@ -55,7 +55,7 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
         title: 'Popup',
         chunks: ['popup'],
         filename: 'popup.html',
-        template: paths.appTemplate,
+        template: paths.popupTemplate,
       },
       isEnvProduction
         ? {
@@ -72,7 +72,7 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
         title: 'Sidebar',
         chunks: ['sidebar'],
         filename: 'sidebar.html',
-        template: paths.appTemplate,
+        template: paths.sidebarTemplate,
       },
       isEnvProduction
         ? {
