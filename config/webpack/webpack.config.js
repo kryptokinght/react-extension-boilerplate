@@ -10,6 +10,15 @@ require('../env');
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 const useTypeScript = fs.existsSync(paths.appTsConfig);
 
+const doesOptionsExist = fs.existsSync(paths.appOptionsJs);
+const doesOptionsHtmlExist = fs.existsSync(paths.optionsTemplate);
+const doesPopupExist = fs.existsSync(paths.appPopupJs);
+const doesPopupHtmlExist = fs.existsSync(paths.popupTemplate);
+const doesSidebarExist = fs.existsSync(paths.appSidebarJs);
+const doesSidebarHtmlExist = fs.existsSync(paths.sidebarTemplate);
+const doesBackgroundExist = fs.existsSync(paths.appBackgroundJs);
+const doesContentExist = fs.existsSync(paths.appContentJs);
+
 
 
 module.exports = function (webpackEnv) {
@@ -24,19 +33,25 @@ module.exports = function (webpackEnv) {
   const loaders = initLoaders(isEnvProduction, isEnvDevelopment, shouldUseRelativeAssetPaths, shouldUseSourceMap);
   const plugins = initPlugins(isEnvProduction, shouldUseSourceMap);
 
+  // named entry cannot be stored in an array and has to be stored inside an object
+  const entryArray = [
+    doesBackgroundExist && { 'background': paths.appBackgroundJs },
+    doesPopupExist && { 'popup': paths.appPopupJs },
+    doesContentExist && { 'content': paths.appContentJs },
+    doesSidebarExist && { 'sidebar': paths.appSidebarJs },
+    doesOptionsExist && { 'options': paths.appOptionsJs },
+  ].filter(Boolean);
+
+  const entry = {};
+  entryArray.forEach(obj => { Object.assign(entry, obj); });
+
   return {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     bail: isEnvProduction, // stop compilation on the very first error itself
     devtool: isEnvProduction
       ? shouldUseSourceMap ? 'source-map' : false
       : isEnvDevelopment && 'cheap-module-source-map',
-    entry: {
-      'popup': paths.appPopupJs,
-      'sidebar': paths.appSidebarJs,
-      'options': paths.appOptionsJs,
-      'background': paths.appBackgroundJs,
-      'content': paths.appContentJs,
-    },
+    entry,
     output: {
       path: isEnvProduction ? paths.appExtension : paths.appDev,
       // pathinfo: isEnvDevelopment,
@@ -95,9 +110,9 @@ module.exports = function (webpackEnv) {
     },
     plugins: [
       plugins.friendlyErrorsWebpackPlugin,
-      plugins.optionsHtmlPlugin,
-      plugins.popupHtmlPlugin,
-      plugins.sidebarHtmlPlugin,
+      doesOptionsHtmlExist && plugins.optionsHtmlPlugin,
+      doesPopupHtmlExist && plugins.popupHtmlPlugin,
+      doesSidebarHtmlExist && plugins.sidebarHtmlPlugin,
       plugins.htmlIncAssetsPlugin,
       plugins.moduleNotFoundPlugin,
       isEnvDevelopment && plugins.CaseSensitivePathsPlugin,
