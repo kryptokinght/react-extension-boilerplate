@@ -35,6 +35,8 @@ Implements all the best Javascript practises with ESLint, Jest, React-StoryBook,
 
 Installing this boilerplate is as simple as cloning this repo in a new folder and start editing the source folder.
 
+*Before you begin installing this project you need [**NodeJS**](https://nodejs.org/en/) and [**npm**](https://www.npmjs.com/get-npm) installed on your machine. Make sure to install the latest version of node.*
+
 ```bash
 # clone the git repo
 $ git clone https://github.com/kryptokinght/react-extension-boilerplate.git
@@ -66,6 +68,34 @@ $ npm run storybook
 ![dev folder screenshot](screenshots/dev_ext.png)
 
 **Go to the project folder and run the following commands:** 
+
+## How to develop extension using the boilerplate
+
+The [CODETOUR.md](CODETOUR.md) gives an overview of the project structure.
+<br/>
+The only folder important to you is the **source folder**. The [`/src`](src) contains the different components of the extension like **content_scripts, background, options, popup, sidebar**. 
+
+Any component which you not require, suppose you don't need *sidebar*, you can simply delete that component from the src folder and it will not be included inside your build.
+
+### If you don't want to use React..
+Suppose you don't want to use React in your [popup](src/popup) to develop UI. You can delete all the files inside the popup folder **only leaving** the [**`template.html`**] inside it. <br/>
+You can use this `template.html` as your `popup.html`. **BUT** any scripts or CSS files referenced inside this template.html should be put inside the `src/lib` folder.<br/>
+#### [Example of an extension bootstrapped using React Extension Boilerplate that doesn't use React!](https://github.com/kryptokinght/react-extension-boilerplate-example)  
+
+### Stroing static asstes like images, fonts
+Separate folders have been provided to store these static assets. 
+* `/src/img`
+* `/src/fonts`
+  
+These assets are copied as it is to the build folder, just like the `/src/lib` folder.
+
+### Delete unnecessary files from the boilerplate
+
+Files like CODETOUR.md, CONTRIBTUING.md, README.md, LICENSE in case they are not relavant to your project. [Once the CLI tool is build](https://github.com/kryptokinght/react-extension-boilerplate/issues/4), it will help you scaffold the extension without including these unnecessary files.
+
+If you need any further help regarding feel free to ask on our [Gitter community](https://gitter.im/react-boilerplate-extension/community) or create an issue.
+
+
 
 ## Build :wrench: :hammer:
 
