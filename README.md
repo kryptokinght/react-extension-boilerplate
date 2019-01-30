@@ -7,7 +7,12 @@
 [![MIT license](https://img.shields.io/github/license/GirlScriptSummerOfCode/Upay.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/kryptokinght/react-extension-boilerplate/pulls)
 
+Are you trying to create a **web Extension** but still looking for a starting point? <br/>
+Do you want your extension to run in both Firefox and Chrome? <br/>
+Are you tired of repeteadly reloading your extension after every small change you make? <br/>
+Do you want to develop your exetension using modern technologies like **React, Webpack, Jest**? <br/>
 
+***We have a solution!***
 
 React Extension Boilerplate is a modern web extension template for building 
 Mozilla and Chrome extensions using ReactJS.
