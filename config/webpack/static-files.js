@@ -13,8 +13,12 @@ const copyPatterns = [
   },
   { from: 'src/img', to: 'img' },
   {
-    from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js',
+    from: 'src/lib',
     to: 'lib/',
+  },
+  {
+    from: 'node_modules/webextension-polyfill/dist/browser-polyfill.js',
+    to: 'lib/js/',
   },
   // { from: 'node_modules/pdfjs-dist/build/pdf.worker.min.js', to: 'lib/' },
   {

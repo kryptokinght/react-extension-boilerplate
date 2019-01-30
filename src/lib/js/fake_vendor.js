@@ -1,0 +1,4 @@
+/*
+Fake vendor JS here
+This file is directly copied to the build folder without any compilation or minification
+*/
