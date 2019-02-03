@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '@polymer/paper-button/paper-button.js';
+
 import './Options.css';
 
 class Options extends Component {
@@ -15,6 +17,7 @@ class Options extends Component {
             Learn React
           </a>
           <h1>Options</h1>
+          <paper-button toggles raised class="green">toggles</paper-button>
         </header>
       </div>
     );

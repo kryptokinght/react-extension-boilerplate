@@ -26,6 +26,10 @@ const copyPatterns = [
     to: 'lib/js/',
   },
   {
+    'from': 'node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js',
+    'to': 'lib/js/'
+  },
+  {
     from: 'src/fonts/*/*',
     to: 'fonts/googlefonts/[name].[ext]',
   },
@@ -42,6 +46,7 @@ const htmlAssets = [
   'fonts/googlefonts/roboto-mono.css',
   'lib/js/browser-polyfill.js',
   'lib/js/webcomponents-bundle.js',
+  'lib/js/custom-elements-es5-adapter.js',
 ];
 
 module.exports = {
