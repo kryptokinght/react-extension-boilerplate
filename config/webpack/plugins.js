@@ -125,7 +125,7 @@ const getPlugins = (isEnvProduction = false, shouldUseSourceMap = false) => {
         : false,
     },
   });
-
+  /* Include these static JS and CSS assets in the generated HTML files */
   const htmlIncAssetsPlugin = new HtmlIncAssetsPlugin({
     append: false,
     assets: staticFiles.htmlAssets,
