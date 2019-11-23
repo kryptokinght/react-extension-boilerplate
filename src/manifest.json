@@ -35,6 +35,11 @@
   "web_accessible_resources": [
     "sidebar.html"
   ],
+  "sidebar_action": {
+    "default_icon": "img/icon.png",
+    "default_title" : "Sidebar",
+    "default_panel": "sidebar.html"
+  },
   "options_ui": {
     "page": "./options.html",
     "open_in_tab": true
