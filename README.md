@@ -53,7 +53,7 @@ $ npm install
 # and launches the web ext in a new chrome instance, watches for changes and updates
 $ npm run start:chrome
 # launches in firefox
-$ npm run start:mozilla
+$ npm run start:firefox
 # runs storybook
 $ npm run storybook
 ```
