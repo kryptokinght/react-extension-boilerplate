@@ -78,11 +78,14 @@ The only folder important to you is the **source folder**. The [`/src`](src) con
 Any component which you not require, suppose you don't need *sidebar*, you can simply delete that component from the src folder and it will not be included inside your build.
 
 ### If you don't want to use React..
+
 Suppose you don't want to use React in your [popup](src/popup) to develop UI. You can delete all the files inside the popup folder **only leaving** the [**`template.html`**] inside it. <br/>
 You can use this `template.html` as your `popup.html`. **BUT** any scripts or CSS files referenced inside this template.html should be put inside the `src/lib` folder.<br/>
+
 #### [Example of an extension bootstrapped using React Extension Boilerplate that doesn't use React!](https://github.com/kryptokinght/react-extension-boilerplate-example)  
 
-### Stroing static asstes like images, fonts
+### Storing static assets like images, fonts
+
 Separate folders have been provided to store these static assets. 
 * `/src/img`
 * `/src/fonts`
