@@ -7,6 +7,7 @@
 [![MIT license](https://img.shields.io/github/license/GirlScriptSummerOfCode/Upay.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/kryptokinght/react-extension-boilerplate/pulls)
 
+**Still in Development!**
 <em>
   
   :zap: Are you trying to create a **web Extension** but still looking for a starting point? <br/>
