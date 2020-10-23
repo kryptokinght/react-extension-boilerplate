@@ -23,7 +23,7 @@ console.log('\n-----------------------------------------------------\n'.yellow.b
 const webpackConfig = webpackConfigFactory('development');
 
 let spinner = new Ora({
-  text: 'Bundling files and asstes using Webpack'.blue,
+  text: 'Bundling files and assets using Webpack'.blue,
   stream: process.stdout
 });
 spinner.start();
