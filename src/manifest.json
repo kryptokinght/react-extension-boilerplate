@@ -16,6 +16,7 @@
   ],
   "background": {
     "scripts": [
+      "lib/js/hot-reload.js",
       "lib/js/browser-polyfill.js",
       "background.js"
     ]
