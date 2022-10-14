@@ -95,7 +95,7 @@ These assets are copied as it is to the build folder, just like the `/src/lib` f
 
 ### Delete unnecessary files from the boilerplate
 
-Files like CODETOUR.md, CONTRIBTUING.md, README.md, LICENSE in case they are not relavant to your project. [Once the CLI tool is build](https://github.com/kryptokinght/react-extension-boilerplate/issues/4), it will help you scaffold the extension without including these unnecessary files.
+Files like CODETOUR.md, CONTRIBTUING.md, README.md, LICENSE in case they are not relavant to your project. [Once the CLI tool is built](https://github.com/kryptokinght/react-extension-boilerplate/issues/4), it will help you scaffold the extension without including these unnecessary files.
 
 If you need any further help regarding feel free to ask on our [Gitter community](https://gitter.im/react-boilerplate-extension/community) or create an issue.
 
