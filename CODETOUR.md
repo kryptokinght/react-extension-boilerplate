@@ -11,7 +11,7 @@ A big thanks to the [`Memex`](https://github.com/WorldBrain/Memex) project for h
 
 ## Source Organisation: [`src/`](src)
 
-To keep things modular, the resources are divided into folders namely `/background`, `/content_scripts`, `/options`, `/popup` and `/sidebar` and `manifest.json`. We can obviously introduce more as required.
+To keep things modular, the resources are divided into folders namely `/background`, `/content_scripts`, `/options`, `/popup`, `/sidebar` and `manifest.json`. We can obviously introduce more as required.
 
 - ### [`/lib`](src/lib): Contains JS and CSS libraries which are not to be compiled and minified by webpack.
 
@@ -30,7 +30,7 @@ To keep things modular, the resources are divided into folders namely `/backgrou
   Webpack bundles the `index.js` into `content_scripts.js` in the build folder.
 
   - [`index.js`](src/content_scripts/index.js):  All the contents of the background page go inside the [index.js](src/content_scripts/index.js) file.
-  Webpack bundles the `index.js` into `content.js` in the build folder. This allows the use of `import` and `require` statements inside the background page.All others scripts for content_scripts are referenced here.
+  Webpack bundles the `index.js` into `content.js` in the build folder. This allows the use of `import` and `require` statements inside the background page. All others scripts for content_scripts are referenced here.
 
 - ### [`popup`](src/popup/): Contains scripts relating to the extension popup page. 
 
@@ -53,8 +53,8 @@ To keep things modular, the resources are divided into folders namely `/backgrou
 ## [`Config folder`](config) : 
 
 - [`webpack/`](config/webpack): Contains the webpack config file and all the files necessary for setting up the webpack config.
-- [`env.js`](config/env.js): Loads environment variables from `.env` . Reference taken from https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/env.js 
-- [`paths.js`](config/paths.js): Returns an API that provides absolute paths for different files inside this project . Reference taken from https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/paths.js 
+- [`env.js`](config/env.js): Loads environment variables from `.env`. Reference taken from https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/env.js 
+- [`paths.js`](config/paths.js): Returns an API that provides absolute paths for different files inside this project. Reference taken from https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/config/paths.js 
 
 ## Other Config files
 
